@@ -49,7 +49,6 @@ Plasma Client for Swift.
     # This is needed by all pods that depend on Protobuf:
     ms.pod_target_xcconfig = {
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1',
-      'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
     }
   end
 
@@ -61,4 +60,7 @@ Plasma Client for Swift.
     ss.dependency "#{s.name}/Messages"
   end
 
+s.pod_target_xcconfig = {
+  'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+}
 end
